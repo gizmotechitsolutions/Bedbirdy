@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Bedbirdy</title>
+    <link rel="stylesheet" href="bedbirdy.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="bedbirdy.html"><h1>Bedbirdy</h1></a>
+                <p>A Step Towards Comfort & Sustainability</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="product.html" class="active">Products</a></li>
+                <li><a href="index.html#sustainability">Sustainability</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="product.html">Products</a>
+            </div>
+            <h1>Our Product Collection</h1>
+            <p>Discover our range of sustainable bedding essentials</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container filter-container">
+            <h3>Filter by Category:</h3>
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="sheets">Fitted Sheets</button>
+                <button class="filter-btn" data-filter="duvets">Duvet Sets</button>
+                <button class="filter-btn" data-filter="pillows">Pillow Cases</button>
+                <button class="filter-btn" data-filter="comforters">Comforters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Fitted Sheets -->
+                <div class="product-card" data-category="sheets" id="fitted-sheets">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1758&q=80" alt="Fitted Sheets">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fitted Sheets</h3>
+                        <p>Perfect Fit, Supreme Softness. Available in 225TC, 300TC, and 400TC variants.</p>
+                        <p class="price">Starting at ₹1,499</p>
+                        <a href="#product-detail" class="btn btn-outline view-details" data-product-id="fitted-sheets">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Duvet Sets -->
+                <div class="product-card" data-category="duvets" id="duvet-sets">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Duvet Sets">
+                    </div>
+                    <div class="product-info">
+                        <h3>Duvet Sets</h3>
+                        <p>Elegant Designs, Breathable Comfort. Perfect blend of luxury and functionality.</p>
+                        <p class="price">Starting at ₹3,999</p>
+                        <a href="#product-detail" class="btn btn-outline view-details" data-product-id="duvet-sets">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Pillow Cases -->
+                <div class="product-card" data-category="pillows" id="pillow-cases">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Pillow Cases">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pillow Cases</h3>
+                        <p>The Final Touch for a Perfect Night's Sleep. Smooth texture and durable stitching.</p>
+                        <p class="price">Starting at ₹499</p>
+                        <a href="#product-detail" class="btn btn-outline view-details" data-product-id="pillow-cases">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Comforters -->
+                <div class="product-card" data-category="comforters" id="comforters">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Comforters">
+                    </div>
+                    <div class="product-info">
+                        <h3>Comforters</h3>
+                        <p>Lightweight Warmth with Sustainable Fill. Year-round comfort with eco-friendly materials.</p>
+                        <p class="price">Starting at ₹4,499</p>
+                        <a href="#product-detail" class="btn btn-outline view-details" data-product-id="comforters">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="section" id="product-detail">
+        <div class="container">
+            <h2 class="section-title">Product Details</h2>
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="thumbnail-list">
+                        <div class="thumbnail active">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1758&q=80" alt="Product Thumbnail 1">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Product Thumbnail 2">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Product Thumbnail 3">
+                        </div>
+                    </div>
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1758&q=80" alt="Main Product Image">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h2>Premium Fitted Sheet</h2>
+                    <p class="price">₹1,499 - ₹2,999</p>
+                    <p>Our premium fitted sheets are designed for the perfect fit and ultimate comfort. Made with sustainably sourced 100% cotton, they feature deep pockets to securely fit mattresses up to 16 inches thick.</p>
+                    
+                    <div class="product-variants">
+                        <h4>Thread Count:</h4>
+                        <button class="variant-btn active">225TC</button>
+                        <button class="variant-btn">300TC</button>
+                        <button class="variant-btn">400TC</button>
+                    </div>
+                    
+                    <div class="product-variants">
+                        <h4>Size:</h4>
+                        <button class="variant-btn">Single</button>
+                        <button class="variant-btn active">Double</button>
+                        <button class="variant-btn">Queen</button>
+                        <button class="variant-btn">King</button>
+                    </div>
+                    
+                    <div class="product-variants">
+                        <h4>Color:</h4>
+                        <button class="variant-btn active">White</button>
+                        <button class="variant-btn">Beige</button>
+                        <button class="variant-btn">Sky Blue</button>
+                        <button class="variant-btn">Sage Green</button>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn">-</button>
+                            <input type="text" class="quantity-input" value="1">
+                            <button class="quantity-btn">+</button>
+                        </div>
+                        <button class="btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    
+                    <table class="specs-table">
+                        <tr>
+                            <td>Material</td>
+                            <td>100% Sustainably Sourced Cotton</td>
+                        </tr>
+                        <tr>
+                            <td>Thread Count</td>
+                            <td>225TC, 300TC, 400TC options</td>
+                        </tr>
+                        <tr>
+                            <td>Care Instructions</td>
+                            <td>Machine wash cold, tumble dry low</td>
+                        </tr>
+                        <tr>
+                            <td>Features</td>
+                            <td>Wrinkle-resistant, deep pockets, breathable</td>
+                        </tr>
+                        <tr>
+                            <td>Sustainability</td>
+                            <td>Eco-friendly dyes, reduced water footprint</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section related-products">
+        <div class="container">
+            <h2 class="section-title">You Might Also Like</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Duvet Sets">
+                    </div>
+                    <div class="product-info">
+                        <h3>Duvet Sets</h3>
+                        <p>Elegant Designs, Breathable Comfort</p>
+                        <a href="#duvet-sets" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Pillow Cases">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pillow Cases</h3>
+                        <p>The Final Touch for a Perfect Night's Sleep</p>
+                        <a href="#pillow-cases" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Bedbirdy</h3>
+                    <p>A Step Towards Comfort & Sustainability. Premium bedding essentials crafted with care for you and the planet.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="index.html#sustainability">Sustainability</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#fitted-sheets">Fitted Sheets</a></li>
+                        <li><a href="#duvet-sets">Duvet Sets</a></li>
+                        <li><a href="#pillow-cases">Pillow Cases</a></li>
+                        <li><a href="#comforters">Comforters</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@bedbirdy.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bedbirdy. All Rights Reserved. Designed with ❤️ in India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bedbirdy.js"></script>
+</body>
+</html>
