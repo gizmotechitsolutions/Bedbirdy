@@ -109,6 +109,9 @@ function updateProductDetail(productId) {
     if (!detailSection) return;
 
     // Update text content
+    // Store the current product ID on the detail section itself for later reference
+    detailSection.dataset.currentProduct = productId;
+
     detailSection.querySelector('.product-info h2').textContent = product.name;
     detailSection.querySelector('.product-info > p:nth-of-type(2)').textContent = product.description;
 
@@ -291,8 +294,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 clickedButton.classList.add('active');
                 // Update the price whenever a variant changes
-                const productId = document.querySelector('.view-details[data-product-id]').getAttribute('data-product-id'); // A bit of a hack to get current product id
-                updatePrice(productId);
+                const currentProductId = document.getElementById('product-detail').dataset.currentProduct;
+                updatePrice(currentProductId);
             }
         });
     }
