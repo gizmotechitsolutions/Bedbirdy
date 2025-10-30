@@ -4,7 +4,7 @@ This project is a front-end implementation of a modern, responsive e-commerce we
 
 ## Live Demo
 
-*(You can add a link to your live GitHub Pages site here once it's deployed.)*
+*(https://gizmotechitsolutions.github.io/Bedbirdy)*
 
 ## Features
 
@@ -65,4 +65,5 @@ Since this is a static website, you can run it without any special tools.
 
 *   **Data-Driven UI:** The `productsData` object in `bedbirdy.js` acts as a mini-database. The UI reads from this object to display product details, preventing the need to hardcode the same information multiple times.
 *   **Event Delegation:** Instead of adding event listeners to every single thumbnail and variant button (many of which are created dynamically), listeners are attached to parent containers (`#product-detail`, `.thumbnail-list`). This is a more efficient pattern that ensures events work even for elements added to the page later.
+
 *   **Dynamic Price Calculation:** The `updatePrice()` function demonstrates how to calculate a final price by combining a `basePrice` with `modifier` values from selected variants, providing an interactive shopping experience.
