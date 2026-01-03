@@ -46,6 +46,13 @@ function initHomepageFeaturedSliders() {
         const dotsContainer = document.createElement('div');
         dotsContainer.className = 'featured-dots';
 
+        // Auto-play: Change slide every 3 seconds
+        let autoSlideInterval = setInterval(() => changeFeaturedSlide(productId, 1), 3000);
+        const resetAutoSlide = () => {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => changeFeaturedSlide(productId, 1), 3000);
+        };
+
         product.images.forEach((_, idx) => {
             const dot = document.createElement('button');
             dot.type = 'button';
@@ -53,6 +60,7 @@ function initHomepageFeaturedSliders() {
             dot.dataset.index = idx;
             dot.addEventListener('click', function () {
                 setFeaturedSlide(productId, parseInt(this.dataset.index, 10));
+                resetAutoSlide();
             });
             dotsContainer.appendChild(dot);
         });
@@ -69,10 +77,12 @@ function initHomepageFeaturedSliders() {
 
         prevBtn.addEventListener('click', function () {
             changeFeaturedSlide(productId, -1);
+            resetAutoSlide();
         });
 
         nextBtn.addEventListener('click', function () {
             changeFeaturedSlide(productId, 1);
+            resetAutoSlide();
         });
 
         // Basic swipe support for mobile (left/right)
@@ -104,6 +114,7 @@ function initHomepageFeaturedSliders() {
                     // swipe right -> previous image
                     changeFeaturedSlide(productId, -1);
                 }
+                resetAutoSlide();
             }
         }, { passive: true });
     });
